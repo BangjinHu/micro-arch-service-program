@@ -1,26 +1,16 @@
 package role.impl;
 
 import lombok.Data;
-import role.EnjoyerTrait;
 import role.HumanTrait;
 
 // 游玩者类
 @Data
-public class Enjoyer implements EnjoyerTrait {
+public class Enjoyer {
+
     private HumanTrait humanTrait;
 
     public Enjoyer(HumanTrait humanTrait) {
         this.humanTrait = humanTrait;
-    }
-
-    @Override
-    public Enjoyer castEnjoyer() {
-        return this;
-    }
-
-    @Override
-    public Human castHuman() {
-        return humanTrait.castHuman();
     }
 
     public void buyTicket() {

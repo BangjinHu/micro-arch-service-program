@@ -15,7 +15,7 @@ public class Park {
     }
 
     public void welcome(Enjoyer enjoyer) {
-        System.out.printf("%s comes to park %s\n", enjoyer.castHuman().getIdentityCard(), this.name);
+        System.out.printf("%s comes to park %s\n", enjoyer.getHumanTrait().castHuman().getIdentityCard().getName(), this.name);
         this.enjoyers.add(enjoyer);
     }
 

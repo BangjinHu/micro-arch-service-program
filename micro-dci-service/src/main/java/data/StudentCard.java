@@ -1,18 +1,13 @@
 package data;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class StudentCard {
-    private int id;      // Java中使用int类型，因为Java没有uint32
+    private int id;
     private String name;
     private String school;
-
-    public StudentCard(int id, String name, String school) {
-        this.id = id;
-        this.name = name;
-        this.school = school;
-    }
-
 }
 

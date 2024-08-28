@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class IdentityCard {
-    private int id;      // Java中使用int类型，因为Java没有uint32
+    private int id;
     private String name;
 
     public IdentityCard(int id, String name) {

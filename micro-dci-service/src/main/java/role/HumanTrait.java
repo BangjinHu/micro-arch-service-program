@@ -7,5 +7,5 @@ public interface HumanTrait {
 
     void decreaseBalance(); // 假设方法，用于减少余额
 
-    void increaseBalance();
+    void increaseBalance();// 假设方法，用于增加余额
 }

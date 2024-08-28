@@ -2,19 +2,17 @@ package role.impl;
 
 import data.Account;
 import data.IdentityCard;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import role.HumanTrait;
 
 // Human类
 @Data
+@AllArgsConstructor
 public class Human implements HumanTrait {
+
     private IdentityCard identityCard;
     private Account account;
-
-    public Human(IdentityCard identityCard, Account account) {
-        this.identityCard = identityCard;
-        this.account = account;
-    }
 
     @Override
     public Human castHuman() {

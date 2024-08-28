@@ -1,6 +1,5 @@
 package context;
 
-
 import data.WorkCard;
 import role.impl.Worker;
 
@@ -20,7 +19,7 @@ public class Company {
     public void employ(Worker worker) {
         WorkCard workCard = new WorkCard(
                 (int) UUID.randomUUID().getLeastSignificantBits(),
-                worker.castHuman().getIdentityCard().getName(),
+                worker.getWorkCard().getName(),
                 this.name
         );
         worker.setWorkCard(workCard);
@@ -35,7 +34,7 @@ public class Company {
         }
         System.out.println("workers start to eating");
         for (Worker worker : this.workers) {
-            worker.castHuman().eat();
+            worker.getHumanTrait().castHuman().eat();
         }
         System.out.println("workers get off work");
         for (Worker worker : this.workers) {

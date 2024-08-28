@@ -16,10 +16,10 @@ public class School {
         this.students = new ArrayList<>();
     }
 
-    public void receive(Student student) {
+    public void enterSchool(Student student) {
         StudentCard studentCard = new StudentCard(
                 (int) UUID.randomUUID().getLeastSignificantBits(),
-                student.castHuman().getIdentityCard().getName(),
+                student.getStudentCard().getName(),
                 this.name
         );
         student.setStudentCard(studentCard);
@@ -34,7 +34,7 @@ public class School {
         }
         System.out.println("students start to eating");
         for (Student student : this.students) {
-            student.castHuman().eat();
+            student.getHumanTrait().castHuman().eat();
         }
         System.out.println("students start to exam");
         for (Student student : this.students) {
