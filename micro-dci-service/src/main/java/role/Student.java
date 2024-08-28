@@ -1,18 +1,17 @@
-package role.impl;
+package role;
 
 import data.StudentCard;
 import lombok.Data;
-import role.HumanTrait;
 
 // 学生类
 @Data
 public class Student {
 
-    private HumanTrait humanTrait;
+    private Human human;
     private StudentCard studentCard;
 
-    public Student(HumanTrait humanTrait) {
-        this.humanTrait = humanTrait;
+    public Student(Human human) {
+        this.human = human;
     }
 
     public void study() {

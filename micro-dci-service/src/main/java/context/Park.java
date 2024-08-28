@@ -1,6 +1,6 @@
 package context;
 
-import role.impl.Enjoyer;
+import role.Enjoyer;
 
 import java.util.ArrayList;
 import java.util.List;

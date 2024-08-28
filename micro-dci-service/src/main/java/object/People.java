@@ -2,10 +2,10 @@ package object;
 
 import data.Account;
 import data.IdentityCard;
-import role.impl.Enjoyer;
-import role.impl.Human;
-import role.impl.Student;
-import role.impl.Worker;
+import role.Enjoyer;
+import role.Human;
+import role.Student;
+import role.Worker;
 
 public class People {
     private Human human;

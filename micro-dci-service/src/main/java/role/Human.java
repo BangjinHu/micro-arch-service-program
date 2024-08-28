@@ -1,31 +1,23 @@
-package role.impl;
+package role;
 
 import data.Account;
 import data.IdentityCard;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import role.HumanTrait;
 
 // Human类
 @Data
 @AllArgsConstructor
-public class Human implements HumanTrait {
+public class Human {
 
     private IdentityCard identityCard;
     private Account account;
 
-    @Override
-    public Human castHuman() {
-        return this;
-    }
-
-    @Override
     public void decreaseBalance() {
         int balance = this.account.getBalance();
         account.setBalance(--balance);
     }
 
-    @Override
     public void increaseBalance() {
         int balance = this.account.getBalance();
         account.setBalance(++balance);

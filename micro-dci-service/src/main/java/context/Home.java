@@ -2,7 +2,7 @@ package context;
 
 
 import lombok.Data;
-import role.impl.Human;
+import role.Human;
 
 @Data
 public class Home {

@@ -1,7 +1,7 @@
 package context;
 
 import data.WorkCard;
-import role.impl.Worker;
+import role.Worker;
 
 import java.util.ArrayList;
 import java.util.List;

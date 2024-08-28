@@ -1,7 +1,7 @@
 package context;
 
 import data.StudentCard;
-import role.impl.Student;
+import role.Student;
 
 import java.util.ArrayList;
 import java.util.List;
