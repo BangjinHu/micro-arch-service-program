@@ -1,6 +1,7 @@
 package aggregate;
 
 import entity.People;
+import service.EnjoyerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +9,12 @@ import java.util.List;
 public class Park {
     private String name;
     private List<People> enjoyers;
+    private EnjoyerService enjoyerService;
 
     public Park(String name) {
         this.name = name;
         this.enjoyers = new ArrayList<>();
+        enjoyerService = new EnjoyerService();
     }
 
     public void welcome(People enjoyer) {
@@ -22,11 +25,11 @@ public class Park {
     public void run() {
         System.out.printf("%s start to sell tickets\n", this.name);
         for (People enjoyer : this.enjoyers) {
-            enjoyer.buyTicket();
+            enjoyerService.buyTicket(enjoyer);
         }
         System.out.printf("%s start a show\n", this.name);
         for (People enjoyer : this.enjoyers) {
-            enjoyer.enjoy();
+            enjoyerService.enjoy(enjoyer);
         }
         System.out.println("show finish");
     }

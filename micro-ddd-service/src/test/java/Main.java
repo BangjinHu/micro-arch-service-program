@@ -15,7 +15,7 @@ public class Main {
         Park summerPalace = new Park("Summer Palace");
 
         // 上学
-        mit.receive(paul);
+        mit.enterSchool(paul);
         mit.run();
 
         // 回家
